@@ -6,7 +6,6 @@ import light from "./styles/themes/light";
 import dark from "./styles/themes/dark";
 
 import { GlobalStyle } from "./styles/global";
-import Header from "./components/Header";
 
 function App() {
   const [theme, setTheme] = usePersistedState("theme", light);
@@ -18,8 +17,7 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyle />
-      <Header toggleTheme={toggleTheme} />
-      <RoutesApp />
+      <RoutesApp toggleTheme={toggleTheme} />
     </ThemeProvider>
   );
 }
