@@ -12,9 +12,11 @@ export default function Header({ toggleTheme }) {
 
   return (
     <Container>
-      <h1>
-        Tech<span>Pay</span>
-      </h1>
+      <a href="/">
+        <h1>
+          Tech<span>Pay</span>
+        </h1>
+      </a>
 
       <ul>
         <li>
@@ -43,7 +45,7 @@ export default function Header({ toggleTheme }) {
         offColor={shade(0.35, colors.primary)}
         onColor="#1521CF"
       />
-      <Button href="#">
+      <Button href="/">
         Abrir conta
         <BsBoxArrowInRight size={30} />
       </Button>

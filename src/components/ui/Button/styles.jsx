@@ -13,7 +13,7 @@ export const Button = styled.button`
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  padding: 0.6rem 0;
+  padding: 0.7rem 0;
 
   &:hover {
     background-color: #0b1035;
