@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 import Background from "../../assets/bg-home.jpg";
+import BackgroundImgEsquerda from "../../assets/img-esquerda.png";
 
 import { shade } from "polished";
 
@@ -40,7 +41,7 @@ export const ContainerSobre = styled.section`
   height: 100vh;
   display: flex;
   flex-direction: column;
-  padding: 0 3rem;
+  background-color: ${(props) => props.theme.background};
 `;
 
 export const Row = styled.div`
@@ -66,18 +67,18 @@ export const Row = styled.div`
     gap: 1rem;
     border-radius: 10px;
     padding: 1rem;
-    background-color: #f2f2f2;
+    background-color: ${(props) =>
+      props.theme.title === "dark" ? props.theme.colors.primary : "#F2F2F2"};
     transition: 0.5s;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+    color: ${(props) => (props.theme.title === "dark" ? "#fff" : "#0B1035")};
 
     h3 {
       font-size: 1.5rem;
-      color: #0b1035;
     }
 
     p {
       font-size: 1rem;
-      color: #0b1035;
     }
 
     svg {
@@ -95,5 +96,110 @@ export const Row = styled.div`
   @media (max-width: 768px) {
     flex-direction: column;
     gap: 2rem;
+  }
+`;
+
+export const SectionSobre = styled.section`
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  padding: 3rem;
+  background-color: ${(props) => props.theme.colors.primary};
+
+  div.esquerda {
+    width: 50%;
+    height: 100%;
+    background-image: url(${BackgroundImgEsquerda});
+    background-size: cover;
+    background-position: center;
+  }
+
+  div.direita {
+    width: 45%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem;
+    margin-inline: 2.5rem;
+
+    div.titulo {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1rem;
+      color: #1521cf;
+
+      h2 {
+        font-size: 2rem;
+      }
+    }
+
+    h3 {
+      font-size: 3rem;
+      text-align: center;
+
+      span {
+        color: #1521cf;
+      }
+    }
+
+    div.conteudo {
+      div.textos {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        margin-top: 2rem;
+        width: 100%;
+        max-width: 500px;
+        padding: 1rem;
+
+        div {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+
+          h4 {
+            font-size: 1.5rem;
+            color: #1521cf;
+          }
+
+          p {
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    padding: 0 2rem;
+
+    div.esquerda {
+      width: 100%;
+      height: 50%;
+    }
+
+    div.direita {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+
+      h3 {
+        font-size: 2rem;
+
+        span {
+          font-size: 1.5rem;
+        }
+      }
+    }
   }
 `;

@@ -1,11 +1,19 @@
 import Header from "../../components/Header";
 import { Button } from "../../components/ui/Button/styles";
 
-import { ContainerHome, ContainerSobre, Row } from "./styles";
+import { ContainerHome, ContainerSobre, Row, SectionSobre } from "./styles";
 
 import { BsBoxArrowInRight } from "react-icons/bs";
 import { RiCloseCircleLine, RiExchangeDollarLine } from "react-icons/ri";
 import { FaMobileAlt, FaMoneyBillAlt } from "react-icons/fa";
+import { BsFilterRight } from "react-icons/bs";
+import { FiTarget } from "react-icons/fi";
+import { IoTelescopeSharp } from "react-icons/io5";
+
+import { Quadrado } from "../../components/ui/Quadrado/styles";
+
+import ImgSobre from "../../assets/img-sobre-1.jpg";
+import ImgSobre2 from "../../assets/img-sobre-2.jpg";
 
 export default function Home({ toggleTheme }) {
   return (
@@ -57,6 +65,45 @@ export default function Home({ toggleTheme }) {
             </p>
           </div>
         </Row>
+        <SectionSobre>
+          <div className="esquerda"></div>
+          <div className="direita">
+            <div className="titulo">
+              <BsFilterRight size={40} />
+              <h2>Sobre nós</h2>
+            </div>
+            <h3>
+              Não há decisões rápidas, mas Boas <span>decisões</span> rápidas
+            </h3>
+            <div className="conteudo">
+              <div className="textos">
+                <FiTarget size={40} color="#1521cf" />
+                <div>
+                  <h4>Nossos Objetivos</h4>
+                  <p>Para ser um dos melhores com clientes em todo o mundo.</p>
+                </div>
+              </div>
+              <div className="textos">
+                <IoTelescopeSharp size={40} color="#1521cf" />
+                <div>
+                  <h4>Nossa visão</h4>
+                  <p>
+                    Dando fácil acesso a serviços bancários e financeiros em
+                    qualquer lugar e em todos os lugares.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <Button
+              href="/"
+              style={{
+                marginTop: "2rem",
+              }}
+            >
+              Mais sobre nós
+            </Button>
+          </div>
+        </SectionSobre>
       </ContainerSobre>
     </>
   );
