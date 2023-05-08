@@ -3,7 +3,6 @@ import styled from "styled-components";
 import Background from "../../assets/bg-home.jpg";
 import BackgroundImgEsquerda from "../../assets/img-esquerda.png";
 
-
 export const ContainerHome = styled.section`
   width: 100%;
   height: 100vh;
@@ -195,6 +194,85 @@ export const SectionSobre = styled.section`
         span {
           font-size: 1.5rem;
         }
+      }
+    }
+  }
+`;
+
+export const ContainerServicos = styled.section`
+  width: 100%;
+  height: auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  div.titulo {
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin: 2rem 0;
+
+    h2 {
+      font-size: 2rem;
+      color: #1521cf;
+    }
+  }
+
+  h3 {
+    font-size: 3rem;
+    text-align: center;
+
+    span {
+      color: #1521cf;
+    }
+  }
+
+  p {
+    font-size: 1rem;
+    text-align: center;
+    margin: 1rem 0;
+  }
+
+  div.cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: left;
+    margin: 2rem 0;
+
+
+    div.card {
+      width: 100%;
+      max-width: 400px;
+      height: 250px;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      padding: 2rem;
+
+      h4 {
+        font-size: 1rem;
+
+        &::before {
+          content: "";
+          border-left: 3px solid #1521cf;
+          position: absolute;
+          margin-left: -1rem;
+          height: 2rem;
+        }
+      }
+
+      p {
+        font-size: 1rem;
+        text-align: left;
+        margin: 1rem 0;
       }
     }
   }

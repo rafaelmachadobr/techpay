@@ -1,7 +1,13 @@
 import Header from "../../components/Header";
 import { Button } from "../../components/ui/Button/styles";
 
-import { ContainerHome, ContainerSobre, Row, SectionSobre } from "./styles";
+import {
+  ContainerHome,
+  ContainerServicos,
+  ContainerSobre,
+  Row,
+  SectionSobre,
+} from "./styles";
 
 import { BsBoxArrowInRight } from "react-icons/bs";
 import { RiCloseCircleLine, RiExchangeDollarLine } from "react-icons/ri";
@@ -101,7 +107,82 @@ export default function Home({ toggleTheme }) {
           </div>
         </SectionSobre>
       </ContainerSobre>
-      <div></div>
+      <ContainerServicos>
+        <div className="titulo">
+          <BsFilterRight size={40} color="#1521cf" />
+          <h2>Nossos Serviços</h2>
+        </div>
+        <h3>
+          Totalmente fornecendo os melhores <span>Serviços</span>
+        </h3>
+        <p>
+          Oferecemos uma ampla gama de serviços aos nossos clientes, o que ajuda
+          a atender às necessidades e expectativas de cada cliente.
+        </p>
+        <div className="cards">
+          <div className="card">
+            <FaMobileAlt size={40} color="#1521cf" />
+            <div className="card-text">
+              <h4>Conta digital grátis</h4>
+              <p>
+                Abra uma conta digital TechPay gratuitamente e tenha acesso a
+                diversas funcionalidades financeiras.
+              </p>
+            </div>
+          </div>
+          <div className="card">
+            <FaMoneyBillAlt size={40} color="#1521cf" />
+            <div className="card-text">
+              <h4>Parcelamento de boletos</h4>
+              <p>
+                Divida suas contas em até 12 vezes e pague com facilidade
+                através da sua carteira digital TechPay.
+              </p>
+            </div>
+          </div>
+          <div className="card">
+            <FaMobileAlt size={40} color="#1521cf" />
+            <div className="card-text">
+              <h4>Cartão de Crédito Virtual</h4>
+              <p>
+                Faça pagamentos online com facilidade e segurança através da sua
+                carteira digital TechPay.
+              </p>
+            </div>
+          </div>
+          <div className="card">
+            <FaMoneyBillAlt size={40} color="#1521cf" />
+            <div className="card-text">
+              <h4>Rendimento CDI</h4>
+              <p>
+                Invista seu dinheiro com rentabilidade justa e segura através da
+                opção de rendimento CDI na TechPay.
+              </p>
+            </div>
+          </div>
+          <div className="card">
+            <FaMobileAlt size={40} color="#1521cf" />
+            <div className="card-text">
+              <h4>Portabilidade de salário</h4>
+              <p>
+                Transfira seu salário automaticamente para a sua conta na
+                TechPay e tenha acesso a diversas funcionalidades financeiras
+                sem tarifas abusivas.
+              </p>
+            </div>
+          </div>
+          <div className="card">
+            <FaMoneyBillAlt size={40} color="#1521cf" />
+            <div className="card-text">
+              <h4>Pagamento Online</h4>
+              <p>
+                Faça pagamentos online com facilidade e segurança através da sua
+                carteira digital TechPay.
+              </p>
+            </div>
+          </div>
+        </div>
+      </ContainerServicos>
       <Footer />
     </>
   );
