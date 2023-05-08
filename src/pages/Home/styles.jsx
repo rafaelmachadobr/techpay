@@ -3,9 +3,6 @@ import styled from "styled-components";
 import Background from "../../assets/bg-home.jpg";
 import BackgroundImgEsquerda from "../../assets/img-esquerda.png";
 
-import { shade } from "polished";
-
-const backgroundColor = shade(0.2, "#f2f2f2");
 
 export const ContainerHome = styled.section`
   width: 100%;
@@ -54,7 +51,7 @@ export const Row = styled.div`
   align-items: center;
   gap: 2rem;
   position: relative;
-  top: -10%;
+  padding: 3rem;
 
   div {
     width: 100%;
@@ -72,6 +69,7 @@ export const Row = styled.div`
     transition: 0.5s;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
     color: ${(props) => (props.theme.title === "dark" ? "#fff" : "#0B1035")};
+    transition: 0.5s;
 
     h3 {
       font-size: 1.5rem;
@@ -87,9 +85,8 @@ export const Row = styled.div`
     }
 
     &:hover {
-      background-color: ${backgroundColor};
-      color: #fff;
       cursor: pointer;
+      transform: scale(1.1);
     }
   }
 
@@ -112,7 +109,7 @@ export const SectionSobre = styled.section`
     height: 100%;
     background-image: url(${BackgroundImgEsquerda});
     background-size: cover;
-    background-position: center;
+    background-repeat: no-repeat;
   }
 
   div.direita {
@@ -183,8 +180,7 @@ export const SectionSobre = styled.section`
     padding: 0 2rem;
 
     div.esquerda {
-      width: 100%;
-      height: 50%;
+      display: none;
     }
 
     div.direita {

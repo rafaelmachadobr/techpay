@@ -9,11 +9,7 @@ import { FaMobileAlt, FaMoneyBillAlt } from "react-icons/fa";
 import { BsFilterRight } from "react-icons/bs";
 import { FiTarget } from "react-icons/fi";
 import { IoTelescopeSharp } from "react-icons/io5";
-
-import { Quadrado } from "../../components/ui/Quadrado/styles";
-
-import ImgSobre from "../../assets/img-sobre-1.jpg";
-import ImgSobre2 from "../../assets/img-sobre-2.jpg";
+import Footer from "../../components/Footer";
 
 export default function Home({ toggleTheme }) {
   return (
@@ -30,41 +26,41 @@ export default function Home({ toggleTheme }) {
           </Button>
         </div>
       </ContainerHome>
+      <Row>
+        <div>
+          <RiExchangeDollarLine size={30} />
+          <h3>Transferências e PIX</h3>
+          <p>
+            Envie e receba dinheiro de forma rápida e fácil, com segurança e
+            proteção de dados.
+          </p>
+        </div>
+        <div>
+          <RiCloseCircleLine size={30} />
+          <h3>Cancelamento</h3>
+          <p>
+            Cancelamento de transações com rapidez e facilidade, em caso de
+            imprevistos
+          </p>
+        </div>
+        <div>
+          <FaMoneyBillAlt size={30} />
+          <h3>Depósito Bancário</h3>
+          <p>
+            Adicione dinheiro à sua conta com facilidade, através de um código
+            de depósito exclusivo
+          </p>
+        </div>
+        <div>
+          <FaMobileAlt size={30} />
+          <h3>Pagamento Online</h3>
+          <p>
+            Realize compras online com praticidade e segurança, sem precisar
+            informar os dados do seu cartão
+          </p>
+        </div>
+      </Row>
       <ContainerSobre>
-        <Row>
-          <div>
-            <RiExchangeDollarLine size={30} />
-            <h3>Transferências e PIX</h3>
-            <p>
-              Envie e receba dinheiro de forma rápida e fácil, com segurança e
-              proteção de dados.
-            </p>
-          </div>
-          <div>
-            <RiCloseCircleLine size={30} />
-            <h3>Cancelamento</h3>
-            <p>
-              Cancelamento de transações com rapidez e facilidade, em caso de
-              imprevistos
-            </p>
-          </div>
-          <div>
-            <FaMoneyBillAlt size={30} />
-            <h3>Depósito Bancário</h3>
-            <p>
-              Adicione dinheiro à sua conta com facilidade, através de um código
-              de depósito exclusivo
-            </p>
-          </div>
-          <div>
-            <FaMobileAlt size={30} />
-            <h3>Pagamento Online</h3>
-            <p>
-              Realize compras online com praticidade e segurança, sem precisar
-              informar os dados do seu cartão
-            </p>
-          </div>
-        </Row>
         <SectionSobre>
           <div className="esquerda"></div>
           <div className="direita">
@@ -105,6 +101,8 @@ export default function Home({ toggleTheme }) {
           </div>
         </SectionSobre>
       </ContainerSobre>
+      <div></div>
+      <Footer />
     </>
   );
 }
