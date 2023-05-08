@@ -15,16 +15,16 @@ export default function Footer() {
             <h4>Inicio</h4>
             <ul>
               <li>
-                <a href="/">about us</a>
+                <a href="/">Sobre nós</a>
               </li>
               <li>
-                <a href="/">our services</a>
+                <a href="/">Carreiras</a>
               </li>
               <li>
-                <a href="/">privacy policy</a>
+                <a href="/">Contato</a>
               </li>
               <li>
-                <a href="/">affiliate program</a>
+                <a href="/">Ética e Compliance</a>
               </li>
             </ul>
           </div>
@@ -32,19 +32,19 @@ export default function Footer() {
             <h4>Central de Ajuda</h4>
             <ul>
               <li>
-                <a href="/">FAQ</a>
+                <a href="/">Para você</a>
               </li>
               <li>
-                <a href="/">shipping</a>
+                <a href="/">Regulamentos</a>
               </li>
               <li>
-                <a href="/">returns</a>
+                <a href="/">Fale com a gente</a>
               </li>
               <li>
-                <a href="/">order status</a>
+                <a href="/">Doações</a>
               </li>
               <li>
-                <a href="/">payment options</a>
+                <a href="/">Renegociação de dívidas</a>
               </li>
             </ul>
           </div>
@@ -52,16 +52,16 @@ export default function Footer() {
             <h4>Informações</h4>
             <ul>
               <li>
-                <a href="/">watch</a>
+                <a href="/">Privacidade</a>
               </li>
               <li>
-                <a href="/">bag</a>
+                <a href="/">Segurança</a>
               </li>
               <li>
-                <a href="/">shoes</a>
+                <a href="/">Demonstrações Financeiras</a>
               </li>
               <li>
-                <a href="/">dress</a>
+                <a href="/">Tarifas e Taxas</a>
               </li>
             </ul>
           </div>

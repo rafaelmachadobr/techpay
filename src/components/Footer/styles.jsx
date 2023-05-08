@@ -94,7 +94,7 @@ export const FooterContainer = styled.footer`
     transform: scale(1.1);
   }
 
-  @media (max-width: 767px) {
+  @media (max-width: 768px) {
     .container {
       align-items: center;
       text-align: center;
@@ -103,6 +103,17 @@ export const FooterContainer = styled.footer`
         width: 100%;
         margin-bottom: 30px;
         text-align: center;
+
+        h4 {
+          margin-bottom: 25px;
+        }
+
+        h4::before {
+          left: 50%;
+          
+          transform: translateX(-50%);
+        }
+
 
         .social-links {
           justify-content: center;
