@@ -2,6 +2,7 @@ import Header from "../../components/Header";
 import { Button } from "../../components/ui/Button/styles";
 
 import {
+  ContainerDepoimentos,
   ContainerHome,
   ContainerServicos,
   ContainerSobre,
@@ -16,8 +17,27 @@ import { BsFilterRight } from "react-icons/bs";
 import { FiTarget } from "react-icons/fi";
 import { IoTelescopeSharp } from "react-icons/io5";
 import Footer from "../../components/Footer";
+import Carrossel from "../../components/Carrossel";
 
 export default function Home({ toggleTheme }) {
+  const users = [
+    {
+      name: 'John Doe',
+      profilePicture: 'https://via.placeholder.com/100x100',
+      comment: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    },
+    {
+      name: 'Jane Smith',
+      profilePicture: 'https://via.placeholder.com/100x100',
+      comment: 'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.',
+    },
+    {
+      name: 'Bob Johnson',
+      profilePicture: 'https://via.placeholder.com/100x100',
+      comment: 'Vivamus id sem sed magna accumsan vehicula eget nec diam.',
+    },
+  ];
+
   return (
     <>
       <Header toggleTheme={toggleTheme} />
@@ -183,6 +203,21 @@ export default function Home({ toggleTheme }) {
           </div>
         </div>
       </ContainerServicos>
+      <ContainerDepoimentos>
+        <div className="titulo">
+          <BsFilterRight size={40} color="#1521cf" />
+          <h2>Opiniões dos usuários</h2>
+        </div>
+        <h3>
+          O que nossos <span>usuários</span> estão falando
+        </h3>
+        <p>
+          Os usuários do TechPay têm compartilhado suas experiências positivas
+          com a plataforma e destacando a facilidade de uso
+        </p>
+
+          <Carrossel />
+      </ContainerDepoimentos>
       <Footer />
     </>
   );

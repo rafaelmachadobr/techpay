@@ -247,7 +247,6 @@ export const ContainerServicos = styled.section`
     text-align: left;
     margin: 2rem 0;
 
-
     div.card {
       width: 100%;
       max-width: 400px;
@@ -275,5 +274,46 @@ export const ContainerServicos = styled.section`
         margin: 1rem 0;
       }
     }
+  }
+`;
+
+export const ContainerDepoimentos = styled.section`
+  width: 100%;
+  height: auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: ${(props) => props.theme.colors.primary};
+
+  div.titulo {
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin: 2rem 0;
+
+    h2 {
+      font-size: 2rem;
+      color: #1521cf;
+    }
+  }
+
+  h3 {
+    font-size: 3rem;
+    text-align: center;
+
+    span {
+      color: #1521cf;
+    }
+  }
+
+  p {
+    font-size: 1rem;
+    text-align: center;
+    margin: 1rem 0;
   }
 `;
