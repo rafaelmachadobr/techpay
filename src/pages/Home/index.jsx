@@ -44,10 +44,12 @@ export default function Home({ toggleTheme }) {
           <h1>
             Pague de forma <span>inteligente</span> com TechPay!
           </h1>
-          <Button href="#">
-            Abrir conta
-            <BsBoxArrowInRight size={30} />
-          </Button>
+          <a href="/login">
+            <Button>
+              Abrir conta
+              <BsBoxArrowInRight size={30} />
+            </Button>
+          </a>
         </div>
       </ContainerHome>
       <Row>
@@ -115,7 +117,6 @@ export default function Home({ toggleTheme }) {
               </div>
             </div>
             <Button
-              href="/"
               style={{
                 marginTop: "2rem",
               }}

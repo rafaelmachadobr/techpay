@@ -45,10 +45,12 @@ export default function Header({ toggleTheme }) {
         offColor={shade(0.35, colors.primary)}
         onColor="#1521CF"
       />
-      <Button href="/">
-        Abrir conta
-        <BsBoxArrowInRight size={30} />
-      </Button>
+      <a href="/login">
+        <Button>
+          Abrir conta
+          <BsBoxArrowInRight size={30} />
+        </Button>
+      </a>
     </Container>
   );
 }
