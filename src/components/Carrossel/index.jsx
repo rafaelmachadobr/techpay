@@ -3,8 +3,11 @@ import { Container } from "./styles.jsx";
 import { motion } from "framer-motion";
 
 import comenatario from "../../assets/comentario.png";
+import comenatario2 from "../../assets/comentario2.png";
+import comenatario3 from "../../assets/comentario3.png";
+import comenatario4 from "../../assets/comentario4.png";
 
-const images = [comenatario, comenatario, comenatario, comenatario];
+const images = [comenatario, comenatario2, comenatario3, comenatario4];
 
 export default function Carrossel() {
   const carrosselRef = useRef();

@@ -4,40 +4,38 @@ import { Button } from "../../components/ui/Button/styles";
 import {
   ContainerDepoimentos,
   ContainerHome,
+  ContainerParceiros,
   ContainerServicos,
   ContainerSobre,
   Row,
   SectionSobre,
 } from "./styles";
 
-import { BsBoxArrowInRight } from "react-icons/bs";
-import { RiCloseCircleLine, RiExchangeDollarLine } from "react-icons/ri";
-import { FaMobileAlt, FaMoneyBillAlt } from "react-icons/fa";
-import { BsFilterRight } from "react-icons/bs";
+import {
+  BsBoxArrowInRight,
+  BsCreditCard2FrontFill,
+  BsFilterRight,
+} from "react-icons/bs";
+import {
+  RiBarChart2Fill,
+  RiCloseCircleLine,
+  RiExchangeDollarLine,
+} from "react-icons/ri";
+import { FaHandHoldingUsd, FaMobileAlt, FaMoneyBillAlt } from "react-icons/fa";
+import { AiOutlineCreditCard } from "react-icons/ai";
 import { FiTarget } from "react-icons/fi";
 import { IoTelescopeSharp } from "react-icons/io5";
+
 import Footer from "../../components/Footer";
 import Carrossel from "../../components/Carrossel";
 
-export default function Home({ toggleTheme }) {
-  const users = [
-    {
-      name: 'John Doe',
-      profilePicture: 'https://via.placeholder.com/100x100',
-      comment: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-    },
-    {
-      name: 'Jane Smith',
-      profilePicture: 'https://via.placeholder.com/100x100',
-      comment: 'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.',
-    },
-    {
-      name: 'Bob Johnson',
-      profilePicture: 'https://via.placeholder.com/100x100',
-      comment: 'Vivamus id sem sed magna accumsan vehicula eget nec diam.',
-    },
-  ];
+import LogoBancoPan from "../../assets/logo-bancopan.png";
+import LogoMercadoLivre from "../../assets/logo-mercadolivre.png";
+import LogoNubank from "../../assets/logo-nubank.png";
+import LogoPaypal from "../../assets/logo-paypal.png";
+import LogoPicpay from "../../assets/logo-picpay.png";
 
+export default function Home({ toggleTheme }) {
   return (
     <>
       <Header toggleTheme={toggleTheme} />
@@ -161,7 +159,7 @@ export default function Home({ toggleTheme }) {
             </div>
           </div>
           <div className="card">
-            <FaMobileAlt size={40} color="#1521cf" />
+            <AiOutlineCreditCard size={40} color="#1521cf" />
             <div className="card-text">
               <h4>Cartão de Crédito Virtual</h4>
               <p>
@@ -171,7 +169,7 @@ export default function Home({ toggleTheme }) {
             </div>
           </div>
           <div className="card">
-            <FaMoneyBillAlt size={40} color="#1521cf" />
+            <RiBarChart2Fill size={40} color="#1521cf" />
             <div className="card-text">
               <h4>Rendimento CDI</h4>
               <p>
@@ -181,7 +179,7 @@ export default function Home({ toggleTheme }) {
             </div>
           </div>
           <div className="card">
-            <FaMobileAlt size={40} color="#1521cf" />
+            <FaHandHoldingUsd size={40} color="#1521cf" />
             <div className="card-text">
               <h4>Portabilidade de salário</h4>
               <p>
@@ -192,7 +190,7 @@ export default function Home({ toggleTheme }) {
             </div>
           </div>
           <div className="card">
-            <FaMoneyBillAlt size={40} color="#1521cf" />
+            <BsCreditCard2FrontFill size={40} color="#1521cf" />
             <div className="card-text">
               <h4>Pagamento Online</h4>
               <p>
@@ -216,8 +214,28 @@ export default function Home({ toggleTheme }) {
           com a plataforma e destacando a facilidade de uso
         </p>
 
-          <Carrossel />
+        <Carrossel />
       </ContainerDepoimentos>
+      <ContainerParceiros>
+        <div className="titulo">
+          <BsFilterRight size={40} color="#1521cf" />
+          <h2>Nossas Parcerias</h2>
+        </div>
+        <h3>
+          Empresas que fazem a <span>diferença</span> no TechPay
+        </h3>
+        <p>
+          O TechPay trabalha com algumas das empresas mais inovadoras do mercado
+          para oferecer aos nível em pagamentos e serviços financeiros.
+        </p>
+        <div className="logos">
+          <img src={LogoBancoPan} alt="Banco Pan" />
+          <img src={LogoMercadoLivre} alt="Mercado Livre" />
+          <img src={LogoNubank} alt="Nubank" />
+          <img src={LogoPaypal} alt="Paypal" />
+          <img src={LogoPicpay} alt="Picpay" />
+        </div>
+      </ContainerParceiros>
       <Footer />
     </>
   );

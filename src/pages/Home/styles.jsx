@@ -190,10 +190,6 @@ export const SectionSobre = styled.section`
 
       h3 {
         font-size: 2rem;
-
-        span {
-          font-size: 1.5rem;
-        }
       }
     }
   }
@@ -246,6 +242,7 @@ export const ContainerServicos = styled.section`
     flex-wrap: wrap;
     text-align: left;
     margin: 2rem 0;
+    gap: 0 2rem;
 
     div.card {
       width: 100%;
@@ -255,6 +252,7 @@ export const ContainerServicos = styled.section`
       flex-direction: column;
       gap: 1.5rem;
       padding: 2rem;
+      padding-right: 0;
 
       h4 {
         font-size: 1rem;
@@ -275,12 +273,18 @@ export const ContainerServicos = styled.section`
       }
     }
   }
+
+  @media (max-width: 768px) {
+    h3 {
+      font-size: 2rem;
+    }
+  }
 `;
 
 export const ContainerDepoimentos = styled.section`
   width: 100%;
   height: auto;
-  min-height: 100vh;
+  min-height: 80vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -315,5 +319,90 @@ export const ContainerDepoimentos = styled.section`
     font-size: 1rem;
     text-align: center;
     margin: 1rem 0;
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    padding: 0 2rem;
+    h2 {
+      font-size: 1.5rem;
+    }
+
+    h3 {
+      font-size: 2.5rem;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+
+    p {
+      font-size: 1rem;
+      text-align: center;
+      margin: 1rem 0;
+    }
+  }
+`;
+
+export const ContainerParceiros = styled.section`
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  div.titulo {
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin: 2rem 0;
+
+    h2 {
+      font-size: 2rem;
+      color: #1521cf;
+    }
+  }
+
+  h3 {
+    font-size: 3rem;
+    text-align: center;
+
+    span {
+      color: #1521cf;
+    }
+  }
+
+  p {
+    margin: 1rem 0;
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  div.logos {
+    margin: 4rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+    gap: 2rem;
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    padding: 0 2rem;
+    h2 {
+      font-size: 1.5rem;
+    }
+
+    div.logos {
+      width: 80%;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
   }
 `;
